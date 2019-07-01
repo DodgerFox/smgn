@@ -1,0 +1,251 @@
+.header
+  height 60px
+  box-shadow 0 5px 9px 1px rgba(0, 0, 0, 0.21)
+  background-color #1c2428
+  +to-width(767px)
+    top 0
+    left 0
+    right 0
+    position fixed
+    z-index 11
+
+  &.open
+    +to-width(767px)
+      .nav, .header-social, .header-search, .header-signin
+        opacity 1
+        pointer-events all
+
+      &.header_page
+        background-color #1c2428
+
+  .wrap
+    display flex
+    justify-content space-between
+    align-items center
+    height 100%
+
+  &_page
+    position absolute
+    z-index 10
+    top 0
+    left 0
+    right 0
+    background-color transparent
+    box-shadow none
+    padding-top 70px
+    +to-width(767px)
+      padding-top 0px
+      background-color #1c2428
+
+
+  &-logo
+    img
+      max-width 95px
+
+  &-wrap
+    display flex
+    align-items center
+
+  &-user
+    width 26px
+    height 26px
+    border-radius 50%
+    background-size cover
+    background-position center
+    background-color #eaeaea
+    margin-right 20px
+    position relative
+    cursor pointer
+    overflow hidden
+    &.signout
+      &:after
+        content ''
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+        background-color rgba(0, 0, 0, 0.5)
+        opacity 0
+        t()
+      &:before
+        content ''
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+        background-image url('../images/signout.svg')
+        z-index 1
+        background-size 50%
+        background-repeat no-repeat
+        background-position center
+        opacity 0
+        t()
+
+      &:hover
+        &:after
+          opacity 1
+        &:before
+          opacity 1
+
+  &-search
+    cursor pointer
+    padding 5px
+    svg
+      t()
+    &:hover
+      svg
+        stroke #e9a88f
+
+    +to-width(767px)
+      position fixed
+      left 15px
+      top 80px
+      z-index 12
+      opacity 0
+      pointer-events none
+      t()
+      svg
+        width 30px
+        height 30px
+
+  &-signin
+    color white
+    margin-right 20px
+    text-transform uppercase
+    font-size 13px
+    font-weight 600
+    padding 4px
+    t()
+    &:hover
+      color #e9a88f
+    +to-width(900px)
+      font-size 11px
+    +to-width(767px)
+      font-size 13px
+      position fixed
+      right 15px
+      top 85px
+      margin-right 0
+      z-index 12
+      opacity 0
+      pointer-events none
+      t()
+
+
+  &-social
+    display none
+    +to-width(767px)
+      display block
+      position fixed
+      display flex
+      justify-content center
+      z-index 12
+      height 90px
+      bottom 0
+      left 0
+      right 0
+      padding-bottom 20px
+      opacity 0
+      pointer-events none
+      t()
+
+    &__item
+      width 52px
+      height 52px
+      display flex
+      align-items center
+      justify-content center
+      border-radius 50%
+      background-color #e9a88f
+      margin 0 10px
+
+  &-gamburger
+    position absolute
+    top 12px
+    right 15px
+    cursor pointer
+    width 24px
+    height 26px
+    display none
+    min-width 24px
+    +to-width(767px)
+      display block
+
+    &__item
+      position absolute
+      left 0
+      top 8px
+      height 2px
+      background-color #f0f0f0
+      right 0
+      transition 0.3s all
+      &:nth-child(2)
+        top 16px
+      &:last-child
+        top 24px
+
+    &.active
+      .header-gamburger__item
+        &:nth-child(1)
+          transform rotate(-45deg)
+          top 18px
+        &:nth-child(2)
+          transform rotate(45deg)
+          top 18px
+        &:last-child
+          opacity 0
+
+    &:hover
+      cursor pointer
+
+
+
+.nav
+  +to-width(767px)
+    position fixed
+    right 0
+    left  0
+    bottom 0
+    top 60px
+    background-color #1c2428
+    z-index 10
+    border-top 2px solid #333
+    opacity 0
+    pointer-events none
+    t()
+
+  &-list
+    display flex
+    font-size 13px
+    font-weight 600
+    letter-spacing 0.44px
+    text-transform uppercase
+    +to-width(900px)
+      font-size 11px
+    +to-width(767px)
+      flex-direction column
+      align-items center
+      justify-content center
+      height 100%
+      padding-bottom 60px
+      font-size 20px
+
+    &__item
+      margin-right 40px
+      +to-width(1024px)
+        margin-right 20px
+      +to-width(767px)
+        margin-right 0
+        margin-bottom 18px
+      a
+        color white
+        t()
+
+      &:last-child
+        margin-right 0
+
+      &:hover
+        a
+          color #e9a88f

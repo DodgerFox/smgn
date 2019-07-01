@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block head
+
+block content
+	include ../blocks/header
+	include ../blocks/searching
+	include ../blocks/authreg
+	main.main
+		include ../blocks/list
+	include ../blocks/footer
+
+	//- +script('common.min')
+	+script('main')

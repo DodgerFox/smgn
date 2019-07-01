@@ -1,0 +1,122 @@
+.searching
+  position absolute
+  position fixed
+  overflow-y scroll
+  background-color rgba(5, 5, 5, 0.9)
+  left 0
+  top 0
+  right 0
+  bottom 0
+  z-index 15
+  opacity 0
+  pointer-events none
+  t()
+  +to-width(767px)
+    padding-top 100px
+  +to-width(520px)
+    padding-top 120px
+
+  &.fade
+    opacity 1
+    pointer-events all
+
+  .wrap
+    height 100%
+    padding-top 15%
+    display flex
+    flex-direction column
+    align-items center
+
+  &-close
+    position fixed
+    right 100px
+    top 100px
+    width 60px
+    cursor pointer
+    t()
+    +to-width(1400px)
+      right 20px
+    +to-width(767px)
+      top 40px
+      right 2px
+    +to-width(520px)
+      width 50px
+    svg
+      t()
+    &:hover
+      svg
+        fill #e9a88f
+
+  &-title
+    color white
+    padding-bottom 40px
+    font-size 30px
+    font-weight 600
+    line-height 34px
+    text-align center
+    +to-width(767px)
+      font-size 24px
+    +to-width(520px)
+      font-size 20px
+      line-height 30px
+
+
+  &-input
+    box-shadow 6px 6px 15px 2px rgba(0, 0, 0, 0.21)
+    border-radius 40px
+    border none
+    background-color #ffffff
+    height 55px
+    min-height 55px
+    width 100%
+    max-width 860px
+    padding 0 30px
+    color #141414
+    font-size 24px
+    box-sizing border-box!important
+    +to-width(520px)
+      font-size 20px
+
+  &-results
+    width 100%
+    max-width 860px
+    padding-top 40px
+
+    .article
+      height auto
+      width 100%
+      max-width 100%
+      margin-bottom 10px
+      padding 0
+      &:last-child
+        margin-bottom 40px
+
+    .article-container
+      height 100%
+      display flex
+      flex-direction column
+      justify-content center
+      padding 60px 30px
+      +to-width(520px)
+        padding 50px 20px
+
+    .article-tag
+      left inherit
+      right 20px
+
+    .article__title
+      font-size 26px
+      line-height 36px
+      +to-width(767px)
+        font-size 22px
+      +to-width(520px)
+        font-size 20px
+        line-height 30px
+
+
+    .article__date
+      position absolute
+      left 30px
+      top 30px
+      +to-width(520px)
+        left 20px

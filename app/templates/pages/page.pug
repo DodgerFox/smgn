@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block head
+
+block content
+	include ../blocks/page-header
+	include ../blocks/searching
+	include ../blocks/authreg
+	main.main
+		include ../blocks/page-welcome
+		//- include ../blocks/content-kirill
+		include ../blocks/page-content
+		//- include ../blocks/subscribe
+		include ../blocks/similar
+		include ../blocks/comments
+	include ../blocks/footer
+
+	//- +script('common.min')
+	+script('main')

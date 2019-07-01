@@ -1,0 +1,236 @@
+.choise
+  width 100%
+  height 100vh
+  position fixed
+  top -100%
+  border-bottom 1px solid #b5b5b5
+  transform translateY(80px)
+  transition 1s all
+  z-index 2
+  &.head
+    transform translateY(70%)
+    border-bottom 1px solid transparent
+    +to-width(1300px)
+      transform translateY(67%)
+    +to-width(767px)
+      transform translateY(0)
+      border-bottom none
+
+    .choise-item__icon
+      opacity 1
+
+    .choise-container
+      background-color rgba(255, 255, 255, 0.6)
+      &:after
+        display block
+
+    .choise-slider
+      opacity 0
+
+    .choise-item__text
+      +to-width(992px)
+        margin-bottom 0px
+        margin-top 0px
+
+  +to-width(992px)
+    transform translateY(60px)
+    .choise-item__text
+      margin-bottom 50px
+      margin-top 30px
+
+  +to-width(767px)
+    top 0
+    transform translateY(0)
+    position absolute
+    padding-top 40px
+    .choise-item__text
+      margin-bottom 0px
+      margin-top 0px
+
+
+  .wrap
+    height 100%
+    display flex
+    flex-direction column
+    align-items center
+    justify-content flex-end
+    +to-width(767px)
+      justify-content flex-start
+      height auto
+      overflow visible
+
+  &-arrow
+    position absolute
+    right 15px
+    top 30px
+    transform rotate(0deg)
+    transition 0.3s transform
+    display none
+    +to-width(767px)
+      display block
+
+  &-slider
+    position absolute
+    bottom 2px
+    left 30px
+    right 30px
+    pointer-events none
+    transition 0.5s opacity
+    transition-delay 0.8s
+    opacity 1
+    &__line
+      background #00978a
+      opacity 0.5
+      width 33.333%
+      height 2px
+      position absolute
+      left 0
+      transition 0.5s transform
+
+  &__title
+    color #171717
+    font-size 48px
+    font-weight 300
+    text-align center
+    padding-bottom 78px
+    +to-width(1300px)
+      font-size 40px
+    +to-width(767px)
+      font-size 36px
+      padding-bottom 18px
+
+  &-body
+    display flex
+    justify-content space-between
+    width 100%
+    margin-bottom -80px
+    +to-width(1300px)
+      margin-bottom -42px
+    +to-width(992px)
+      margin-bottom -45px
+    +to-width(767px)
+      flex-direction column
+      align-items center
+
+  &-container
+    width 100%
+    height 365px
+    border-radius 50%
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    position relative
+    background-color rgba(255, 255, 255, 0)
+    transition 0.8s all
+    transition-delay 0.2s
+    cursor pointer
+
+    &:after
+      content ''
+      position absolute
+      left 9px
+      right 9px
+      top 9px
+      bottom 9px
+      border-radius 50%
+      border 1px solid transparent
+      display none
+      t()
+
+    &:hover
+      &:after
+        border 1px solid #00b0a2
+
+    +to-width(1300px)
+      width 280px
+      min-width 280px
+      height 280px
+
+    +to-width(992px)
+      width 220px
+      min-width 220px
+      height 220px
+      margin-right 20px
+
+    +to-width(767px)
+      width 100%
+      height 68px
+      border-radius 0
+      margin 6px 0
+      flex-direction row
+      justify-content flex-start
+      align-items center
+      background-color rgba(255, 255, 255, 0.6)
+      padding 0 20px
+      &:after
+        display none!important
+
+  &-item
+    width 33.333%
+    display flex
+    justify-content center
+    padding 0 20px
+    transition 1.4s max-height
+    transition-delay 0
+    &.open
+      max-height 4000px
+
+      .choise-arrow
+        transform rotate(180deg)
+
+    .change-item
+      display none
+
+    +to-width(767px)
+      width auto
+      min-width 100%
+      margin-left -15px
+      margin-right -15px
+      padding-left 15px
+      padding-right 15px
+      display block
+      max-height 80px
+      overflow hidden
+      .change-item
+        display block
+
+    &__icon
+      height 84px
+      margin-bottom 40px
+      display flex
+      align-items flex-end
+      justify-content center
+      opacity 0
+      transition 0.5s opacity
+      transition-delay 0.5s
+      +to-width(1300px)
+        margin-bottom 30px
+      +to-width(992px)
+        height 70px
+        margin-bottom 20px
+        img
+          width 80%
+      +to-width(767px)
+        height auto
+        max-width 34px
+        margin-bottom 0
+        margin-right 20px
+        opacity 1
+        img
+          width 100%
+
+    &__text
+      font-weight 300
+      font-size 28px
+      color #242424
+      +to-width(1300px)
+        font-size 20px
+        font-weight 500
+
+      +to-width(992px)
+        font-size 14px
+
+      +to-width(767px)
+        font-size 19px
+        font-weight 400

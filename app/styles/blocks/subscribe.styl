@@ -1,0 +1,99 @@
+.subscribe
+  background-color #f0f0f0
+  padding 90px 0
+  +to-width(640px)
+    padding 50px 0
+
+  .wrap
+    display flex
+    flex-direction column
+    align-items center
+
+  &__title
+    color #1a1a1a
+    font-family "Playfair Display"
+    font-size 44px
+    font-weight 400
+    padding-bottom 18px
+    text-align center
+    span
+      color #1c2428
+      font-family "Molodofont"
+      font-size 56px
+      font-weight 400
+      letter-spacing 2.24px
+      margin-left 6px
+    +to-width(820px)
+      font-size 34px
+      span
+        font-size 42px
+    +to-width(640px)
+      font-size 30px
+      line-height 44px
+      span
+        font-size 38px
+
+
+  &__text
+    color #4b4b4b
+    font-family "Playfair Display"
+    font-size 24px
+    font-weight 400
+    padding-bottom 70px
+    text-align center
+    +to-width(820px)
+      font-size 20px
+      padding-bottom 40px
+    +to-width(640px)
+      font-size 18px
+      line-height 24px
+
+
+  &__input
+    box-shadow 6px 6px 15px 2px rgba(0, 0, 0, 0.21)
+    border-radius 90px
+    background-color #1c2428
+    border none
+    width 100%
+    max-width 700px
+    height 66px
+    padding 0 30px
+    color white
+    font-size 26px
+    text-align center
+    t()
+    +to-width(820px)
+      height 54px
+      max-width 560px
+      font-size 24px
+    +to-width(640px)
+      font-size 16px
+
+  &-social
+    display flex
+    margin-top 50px
+    +to-width(820px)
+      margin-top 30px
+    &__item
+      width 76px
+      height 76px
+      border-radius 50%
+      margin-right 34px
+      background-color #1c2428
+      display flex
+      align-items center
+      justify-content center
+      box-shadow 6px 6px 15px 2px rgba(0, 0, 0, 0)
+      t()
+
+      +to-width(820px)
+        width 64px
+        height 64px
+      +to-width(640px)
+        margin-right 20px
+
+      &:last-child
+        margin-right 0
+
+      &:hover
+        box-shadow 6px 6px 15px 2px rgba(0, 0, 0, 0.21)

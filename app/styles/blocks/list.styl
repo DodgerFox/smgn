@@ -1,0 +1,595 @@
+.list
+  min-height 100vh
+  background-color #eaeaea
+  // background-image url('../images/main-bg.jpg')
+  background-image url('../images/sky.jpg')
+  background-size cover
+  background-position top center
+  // &:after
+  //   content ''
+  //   left 0
+  //   right 0
+  //   top 0
+  //   bottom 0
+  //   position absolute
+  //   background-color rgba(255, 255, 255, 0.03)
+
+  +to-width(767px)
+    padding-top 40px
+
+  .wrap
+    max-width 1100px
+
+  &-body
+    display flex
+    flex-wrap wrap
+    padding 55px 0
+    margin-left -20px
+    margin-right -20px
+    position relative
+    z-index 2
+    +to-width(767px)
+      margin 0
+    +to-width(640px)
+      padding-top 40px
+    +to-width(560px)
+      display flex
+      flex-direction column
+      justify-content flex-start
+      align-items center
+
+  &-category
+    font-size 70px
+    font-weight 600
+    color #f7b197
+    margin-top 70px
+    display flex
+    align-items center
+    text-transform uppercase
+    &__icon
+      margin-right 20px
+    img
+      margin-right 20px
+    h1
+      text-shadow 1px 1px 1px #5d5d5d
+    +to-width(1024px)
+      font-size 60px
+    +to-width(767px)
+      text-align center
+    +to-width(640px)
+      font-size 42px
+
+
+.article
+  width 33.333%
+  height 360px
+  padding 0 10px
+  margin-bottom 30px
+  max-width 380px
+  position relative
+  +to-width(990px)
+    height 330px
+  +to-width(767px)
+    width 50%
+  +to-width(560px)
+    padding 0
+    width 100%
+    max-width 320px!important
+    height 330px
+    display flex
+    justify-content center
+
+  &:hover
+    .article-social
+      opacity 1
+      transform translateX(0px)
+
+    .article__image
+      &:after
+        background-color rgba(0, 0, 0, 0.5)
+
+    .article-info
+      transform translateY(0px)
+
+  &.with-picture
+    .article__date, .article__title, .article-user__title, .article-info__item p
+      color white!important
+
+    .article__title
+      text-shadow 0px 0px 50px #000
+    //   background #e8cb98
+    //   padding 10px 0
+    //   margin-left -100px
+    //   padding-left 100px
+
+    .article-social__item svg
+      fill white
+      &:hover
+        fill #e2c38e
+
+    .article-user__image
+      border 2px solid white
+
+    .article-info
+      opacity 1!important
+
+    .article-container
+      &:after
+        content ''
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+        background-color rgba(0, 0, 0, 0.25);
+
+
+  &_medium
+    width 66.666%
+    max-width inherit
+    +to-width(767px)
+      width 100%
+      height 300px
+
+    .article-container
+      padding 48px 55px
+      display flex
+      align-items center
+      padding-top 60px
+      +to-width(767px)
+        padding 0 40px
+      +to-width(560px)
+        max-width 320px
+        padding 40px 20px
+
+    .article-info
+      padding-left 55px
+      background-color transparent
+      +to-width(767px)
+        bottom 49px
+        padding-left 40px
+      +to-width(560px)
+        bottom 74px
+        left initial
+        right 0
+        padding-left 20px
+
+    .article__date
+      position absolute
+      left 55px
+      top 36px
+      font-weight 600
+      +to-width(767px)
+        left 40px
+      +to-width(560px)
+        left 20px
+        top 30px
+
+
+    .article-user
+      right 55px
+      top 30px
+      bottom initial
+      +to-width(767px)
+        right 40px
+      +to-width(560px)
+        right 20px
+        top 20px
+
+
+    .article-tag
+      bottom 30px
+      right 55px
+      z-index 3
+      left initial
+      top initial
+      +to-width(767px)
+        right 40px
+      +to-width(560px)
+        right 20px
+        bottom 20px
+
+    .article__title
+      font-weight 700
+      font-size 26px
+      line-height 40px
+      letter-spacing 0.8px
+      margin-top 0px
+      +to-width(990px)
+        font-size 26px
+        line-height 38px
+      +to-width(640px)
+        font-size 22px
+      +to-width(560px)
+        font-size 18px
+        line-height 28px
+
+
+    .article-user__title
+      display block
+      +to-width(640px)
+        display none
+
+    .article-user__image
+      margin-right 17px
+      width 30px
+      height 30px
+      +to-width(640px)
+        margin-right 0
+
+    .article-social
+      bottom 0
+      height initial
+
+    &:hover
+      .article-info
+        bottom 24px
+
+  &_big
+    width 100%
+    height 300px
+    max-width initial
+
+    .article-container
+      padding 48px 55px
+      display flex
+      align-items center
+      padding-top 60px
+      +to-width(767px)
+        padding 0 40px
+      +to-width(560px)
+        max-width 320px
+        padding 40px 20px
+
+      &:hover
+        .article-info
+          bottom 24px
+
+    .article-social
+      bottom 0
+      height initial
+
+    .article-info
+      padding-left 55px
+      background-color transparent
+      +to-width(767px)
+        bottom 49px
+        padding-left 40px
+      +to-width(560px)
+        bottom 73px
+        padding-left 20px
+        justify-content flex-end
+        opacity 0.5
+
+    .article__date
+      position absolute
+      left 55px
+      top 36px
+      font-weight 600
+      +to-width(767px)
+        left 40px
+      +to-width(560px)
+        left 20px
+        top 30px
+
+
+    .article-user
+      right 55px
+      top 30px
+      bottom initial
+      +to-width(767px)
+        right 40px
+      +to-width(560px)
+        right 20px
+        top 20px
+
+
+    .article-tag
+      bottom 30px
+      right 55px
+      left initial
+      top initial
+      +to-width(767px)
+        right 40px
+      +to-width(560px)
+        right 20px
+        bottom 20px
+
+    .article__title
+      font-weight 700
+      font-size 30px
+      line-height 44px
+      letter-spacing 0.8px
+      margin-top 0px
+      +to-width(990px)
+        font-size 26px
+        line-height 38px
+      +to-width(640px)
+        font-size 22px
+      +to-width(560px)
+        font-size 18px
+        line-height 28px
+
+
+    .article-user__title
+      display block
+      +to-width(640px)
+        display none
+
+    .article-user__image
+      margin-right 17px
+      width 30px
+      height 30px
+      +to-width(640px)
+        margin-right 0
+
+    &:hover
+      .article-info
+        bottom 24px
+
+  &.bg-none
+    .article-container
+      background-image none!important
+      &:after
+        display none
+
+  &.picture
+    .article-user__title, .article__title, .article__date
+      color white
+    .article-container
+      &:after
+        content ''
+        position absolute
+        left 0
+        top 0
+        right 0
+        bottom 0
+        background-color rgba(0, 0, 0, 0.4);
+
+  &.podcast
+    .article-container
+      display flex
+      flex-direction column
+      align-items center
+      justify-content center
+      &:hover
+        &:before
+          border 8px solid #e2c38e
+      &:after
+        content ''
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+        background-color rgba(5, 5, 5, 0.5)
+
+      &:before
+        content ''
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+        border 8px solid #eaeaea
+        border-radius 30px
+        z-index 1
+        t()
+
+    .article__icon
+      width 100%
+      max-width 120px
+      margin-bottom 25px
+      z-index 2
+      +to-width(767px)
+        max-width 100px
+
+    .article__date
+      color white
+
+    .article__title
+      color white
+      margin 4px 20px
+      text-align center
+
+
+    .article-tag
+      position relative
+      left 0
+      +to-width(767px)
+        top 10px
+
+  &-container
+    border-radius 30px
+    background-color white
+    box-shadow 6px 6px 15px 2px rgba(0, 0, 0, 0.21)
+    width 100%
+    height 100%
+    position relative
+    overflow hidden
+    background-size cover
+    cursor pointer
+    display block
+
+
+
+  &__title
+    color #262626
+    font-size 16px
+    font-weight 700
+    letter-spacing 0.8px
+    line-height 24px
+    margin-top 12px
+    position relative
+    z-index 2
+    +to-width(990px)
+      font-size 14px
+      line-height 22px
+    +to-width(640px)
+      line-height 24px
+    +to-width(560px)
+      font-size 16px
+
+  &__image
+    width auto
+    height 220px
+    background-size cover
+    border-radius 20px 20px 0 0
+    position relative
+    overflow hidden
+
+    &:after
+      content ''
+      position absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      t()
+      background-color rgba(0, 0, 0, 0)
+
+    +to-width(990px)
+      height 170px
+
+
+  &__date
+    font-size 14px
+    font-weight 600
+    color #262626
+    position relative
+    z-index 2
+    +to-width(560px)
+      font-size 12px
+
+  &-social
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    position absolute
+    top 0
+    transform translateX(20px)
+    height 220px
+    right 20px
+    z-index 4
+    opacity 0
+    t()
+    &__item
+      width 40px
+      margin-bottom 5px
+      svg
+        t()
+      &:last-child
+        margin-bottom 0
+
+      &:hover
+        svg
+          fill #e2c38e
+
+
+  &-user
+    position absolute
+    display flex
+    align-items center
+    right 15px
+    bottom 15px
+    z-index 2
+
+    &__title
+      font-size 14px
+      font-weight 600
+      color #262626
+      display none
+
+    &__image
+      width 26px
+      height 26px
+      border-radius 50%
+      background-color #333
+      background-size cover
+      background-position center
+
+  &-tag
+    position absolute
+    z-index 3
+    left 30px
+    top 20px
+    display flex
+
+
+    &__item
+      border-radius 20px
+      background-color #e8cb99
+      height 24px
+      padding 0 14px
+      font-size 11px
+      color #262626
+      text-transform uppercase
+      letter-spacing 0.3px
+      font-weight 700
+      display flex
+      justify-content center
+      align-items center
+      margin-right 10px
+      t()
+      &:last-child
+        margin-right 0
+
+      &.green
+        background-color #aaccaa
+
+      &.red
+        background-color #fb8e8d
+
+      &.blue
+        background-color #78bcdc
+
+      &.hidden
+        display none
+
+      &:hover
+        opacity 0.8
+
+  &-info
+    position absolute
+    z-index 2
+    bottom 0
+    left 0
+    right 0
+    height 30px
+    background-color #e2c38e
+    overflow hidden
+    display flex
+    align-items center
+    padding 0 20px
+    transform translateY(22px)
+    t()
+
+    &__item
+      display flex
+      align-items center
+      margin-right 25px
+      &:last-child
+        margin-right 0
+      img
+        max-width 22px
+        max-height 14px
+        margin-right 9px
+
+      p
+        font-size 12px
+        color #141414
+
+  &-body
+    padding 20px
+
+.true_loadmore
+  font-size 26px
+  margin 20px auto
+  color #506471
+  cursor pointer
+  font-weight 700
+  letter-spacing 0.3px
+  t()
+  &:hover
+    color #f7b197

@@ -1,0 +1,312 @@
+.comments
+  background-image url("../images/main-bg.jpg")
+  background-color #eaeaea
+  padding-bottom 90px
+
+  .wrap
+    display flex
+    flex-direction column
+    align-items center
+
+  &-title
+    color #000000
+    font-family "Playfair Display"
+    font-weight 900
+    font-size 40px
+    text-align center
+    padding 30px 30px
+    padding-top 150px
+    margin 0 auto
+    display block
+    width 400px
+    background-color #e2c38e
+    margin-bottom 90px
+    +to-width(767px)
+      font-size 32px
+      width 320px
+      padding-top 80px
+    +to-width(420px)
+      font-size 28px
+      width 280px
+
+  &-under
+    position absolute
+    left 0
+    bottom 16px
+    color #aaa
+    font-weight 500
+    font-size 13px
+    padding-left 24px
+    +to-width(420px)
+      font-size 10px
+    &:after
+      content ''
+      position absolute
+      left 0px
+      top 1px
+      width 16px
+      height 10px
+      opacity 0.3
+      background-image url('../images/arrow-feedback.svg')
+      +to-width(420px)
+        top -1px
+
+  &-add
+    width 100%
+    margin-top 5px
+    border none
+    background-color #e2c38e99
+    font-size 14px
+    font-weight 500
+    padding 5px 20px
+    border-radius 120px
+    display none
+    &.open
+      display block
+
+  &-form
+    display flex
+    flex-direction column
+    align-items center
+    width 100%
+    max-width 1080px
+    position relative
+
+    &__write
+      border-radius 25px
+      background-color #fff
+      width 100%
+      max-width 1080px
+      height 180px
+      padding 30px 42px
+      font-size 20px
+      font-weight 500
+      line-height 32px
+      font-family Montserrat
+      color #010101
+      box-shadow 6px 6px 15px 2px rgba(0,0,0,0.21)
+      +placeholder()
+        color #aaa
+        font-weight 400
+      +to-width(900px)
+        font-size 18px
+        padding 30px 30px
+      +to-width(420px)
+        font-size 14px
+      +to-width(340px)
+        font-size 14px
+        padding 20px
+
+    &__button
+      position absolute
+      bottom 23px
+      right 45px
+      display flex
+      align-items center
+      cursor pointer
+      +to-width(900px)
+        right 30px
+      +to-width(420px)
+        right 20px
+        bottom 20px
+      t()
+      &:hover
+        opacity 0.7
+      input
+        font-size 16px
+        font-weight 600
+        font-family Montserrat
+        color #141414
+        background-color transparent
+        border none
+        +to-width(640px)
+          font-size 14px
+        +to-width(420px)
+          display none
+
+
+    &__icon
+      width 35px
+      height 35px
+      border-radius 50%
+      background-color #e2c38e
+      display flex
+      justify-content center
+      align-items center
+      margin-left 15px
+      img
+        max-width 16px
+        margin-right 3px
+
+  &-head
+    display flex
+    justify-content space-between
+
+  &-body
+    width 100%
+    max-width 1080px
+    margin-top 30px
+
+  &-item
+    width 100%
+    max-width 1080px
+    border-radius 25px
+    position relative
+    background-color #fff
+    padding 30px
+    padding-bottom 10px
+    padding-left 140px
+    margin-bottom 15px
+    box-shadow 6px 6px 15px 2px rgba(0,0,0,0.21)
+    +to-width(600px)
+      padding-left 30px
+    +to-width(340px)
+      padding 20px
+    .comments-item
+      padding-left 110px
+      padding-right 0
+      border-top 2px solid #e7e7e7
+      border-radius 0
+      box-shadow none
+      margin-bottom 0
+      padding-bottom 0
+      +to-width(767px)
+        padding-left 0px
+        .comments-user__title
+          font-size 16px
+          padding-bottom 8px
+        .comments-user__text
+          font-size 12px
+        .comments-content__text
+            font-size 14px
+        .comments-user-info
+          margin-left 80px
+        .comments-user__image
+          width 60px
+          height 60px
+          left 0
+          top 8px
+      +to-width(600px)
+        padding-left 30px
+      +to-width(460px)
+        padding-left 10px
+      +to-width(420px)
+        .comments__date
+          right 0
+          top -10px
+
+  &-user
+    position relative
+    &__image
+      width 80px
+      height 80px
+      border-radius 50%
+      position absolute
+      background-color #333
+      background-size cover
+      background-position top center
+      top 0
+      left -110px
+      +to-width(600px)
+        left 0
+        width 60px
+        height 60px
+        top 8px
+      span
+        width 28px
+        height 28px
+        border-radius 50%
+        background-color #e2c38e
+        display flex
+        align-items center
+        justify-content center
+        position absolute
+        right -2px
+        top -2px
+        border 2px solid white
+
+    &-info
+      height 80px
+      display flex
+      flex-direction column
+      justify-content center
+      +to-width(600px)
+        margin-left 80px
+
+    &__title
+      font-size 20px
+      font-weight 700
+      font-family Montserrat
+      color #2b2b2b
+      padding-bottom 12px
+      +to-width(767px)
+        font-size 16px
+        padding-bottom 8px
+        line-height 20px
+
+    &__text
+      color #696969
+      font-size 16px
+      font-weight 700
+      letter-spacing 0.5px
+      font-style italic
+      font-family "Playfair Display"
+      +to-width(767px)
+        font-size 14px
+      +to-width(420px)
+        font-size 12px
+
+  &-content
+    padding-top 5px
+    padding-bottom 40px
+    position relative
+    t()
+    p
+      color #2b2b2b
+      font-family Montserrat
+      font-size 16px
+      font-weight 500
+      line-height 28px
+      +to-width(767px)
+        font-size 14px
+        line-height 25px
+
+  &-feedback
+    color #2b2b2b
+    font-family Montserrat
+    font-size 15px
+    font-weight 500
+    line-height 36px
+    position absolute
+    right 0
+    bottom 3px
+    cursor pointer
+    t()
+    &:after
+      content ''
+      position absolute
+      left -22px
+      top 12px
+      width 16px
+      height 10px
+      background-image url('../images/arrow-feedback.svg')
+    &:hover
+      opacity 0.7
+    +to-width(420px)
+      font-size 13px
+      &:after
+        top 13px
+
+  &__date
+    color #808080
+    font-family Montserrat
+    font-size 14px
+    font-weight 500
+    margin-top 15px
+    +to-width(767px)
+      font-size 12px
+      margin-top 25px
+    +to-width(420px)
+      position absolute
+      top -5px
+      right 20px

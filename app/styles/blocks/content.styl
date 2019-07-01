@@ -1,0 +1,542 @@
+.content
+  padding-top 110px
+  padding-bottom 40px
+  min-height 750px
+  +to-width(1200px)
+    padding-top 60px
+  // &:after
+  //   content ''
+  //   position absolute
+  //   left -1000px
+  //   right -1000px
+  //   top 2000px
+  //   height 1100px
+  //   background-color #caecec
+  //   transform rotate(2deg)
+  //   +to-width(640px)
+  //     display none
+
+  .wrap
+    max-width 1200px
+    z-index 2
+
+  &-info
+    width 270px
+    position absolute
+    left 0
+    top 0
+    display flex
+    flex-direction column
+    align-items center
+    +to-width(1200px)
+      position relative
+      flex-direction row
+      justify-content space-between
+      width inherit
+
+    +to-width(820px)
+      flex-direction column
+      align-items flex-start
+
+  &-autor
+    display flex
+    flex-direction column
+    align-items center
+    position relative
+    padding-bottom 24px
+    text-align center
+    +to-width(1200px)
+      flex-direction row
+      text-align left
+
+    &__line
+      content ''
+      bottom -20px
+      height 2px
+      width 78px
+      background-color #ababab
+      position relative
+      margin 0 auto
+      +to-width(1200px)
+        display none
+
+
+    &__image
+      width 140px
+      height 140px
+      border-radius 50%
+      position relative
+      background-color #333333
+      background-size cover
+      background-position top center
+      margin-bottom 15px
+      span
+        width 34px
+        height 34px
+        border-radius 50%
+        background-color #e2c38e
+        display flex
+        align-items center
+        justify-content center
+        position absolute
+        right 5px
+        top 5px
+        border 3px solid white
+
+      +to-width(1200px)
+        width 110px
+        min-width 110px
+        height 110px
+        margin-bottom 0
+        span
+          right 0
+          top 0
+      +to-width(640px)
+        width 80px
+        min-width 80px
+        height 80px
+        span
+          right -5px
+          top -5px
+
+    &__title
+      color #1a1a1a
+      font-size 18px
+      font-weight 600
+      font-family "Montserrat"
+      padding-bottom 11px
+      +to-width(1200px)
+        font-size 22px
+        font-weight 700
+      +to-width(640px)
+        font-size 18px
+        line-height 22px
+        padding-bottom 6px
+
+    &__status
+      color #767676
+      font-size 16px
+      font-weight 700
+      font-style italic
+      font-family "Playfair Display"
+      +to-width(1200px)
+        font-size 18px
+      +to-width(640px)
+        font-size 16px
+
+    &-wrap
+      +to-width(1200px)
+        margin-left 25px
+      +to-width(420px)
+        margin-left 15px
+
+  &-social
+    display flex
+    flex-direction column
+    margin-top 100px
+    max-width 50px
+    +to-width(1200px)
+      flex-direction row
+      max-width inherit
+      left 0
+      margin-top 0px
+      margin-bottom 20px
+
+    .theChampSharingRound
+      i
+        margin-bottom 10px
+        display flex
+        align-items center
+        justify-content center
+        t()
+        +to-width(1200px)
+          margin-bottom 0
+          margin-right 10px
+        ss
+          width 75%
+          height 75%
+      &:last-child
+        i
+          margin-bottom 0
+          +to-width(1200px)
+            margin-right 0
+
+    &__item
+      display flex
+      flex-direction row-reverse
+      justify-content flex-end
+      align-items center
+      margin-bottom 10px
+      t()
+      &:nth-child(1)
+        color #4a76a8
+        .content-social__icon
+          background-color #4a76a8
+      &:nth-child(2)
+        color #2F4589
+        .content-social__icon
+          background-color #2F4589
+      &:nth-child(3)
+        color #27A2EF
+        .content-social__icon
+          background-color #27A2EF
+
+      &:hover
+        color #e2c38e
+        .content-social__icon
+          background-color #e2c38e
+
+      +to-width(1200px)
+        margin-right 20px
+
+    &__icon
+      height 50px
+      min-width 50px
+      width 50px
+      border-radius 50%
+      display flex
+      justify-content center
+      align-items center
+      t()
+      +to-width(640px)
+        height 45px
+        min-width 45px
+        width 45px
+
+    &__text
+      margin-left 15px
+      font-size 14px
+
+
+  // &__image
+  figure
+    padding-bottom 30px
+    position relative
+    display inline-block
+    img
+      max-width 100%
+
+    // p
+    figcaption
+      right 0
+      bottom 0
+      margin-top 15px
+      text-align right
+      font-weight 500!important
+      font-size 16px!important
+      line-height 26px!important
+      padding-bottom 0!important
+      caption-side initial!important
+      display block!important
+      +to-width(767px)
+        margin-right 15px
+      +to-width(640px)
+        font-size 14px!important
+        max-width 200px
+
+    iframe
+      width 100%!important
+      height 462px!important
+
+
+  &-body
+    padding-left 270px
+    padding-right 50px
+    +to-width(1200px)
+      padding 0
+
+    h1
+      font-size 42px
+      font-weight 600
+      line-height 54px
+      padding-bottom 40px
+      +to-width(1100px)
+        font-size 38px
+      +to-width(640px)
+        font-size 34px
+        line-height 50px
+        padding-bottom 20px
+      +to-width(420px)
+        font-size 30px
+        line-height 40px
+
+    h2
+      font-size 38px
+      font-weight 600
+      line-height 50px
+      padding-bottom 35px
+      +to-width(1100px)
+        font-size 36px
+      +to-width(640px)
+        font-size 30px
+        line-height 46px
+        padding-bottom 20px
+      +to-width(420px)
+        font-size 26px
+        line-height 30px
+
+    h3
+      font-size 34px
+      font-weight 600
+      line-height 44px
+      padding-bottom 35px
+      +to-width(1100px)
+        font-size 32px
+      +to-width(640px)
+        font-size 28px
+        line-height 40px
+        padding-bottom 20px
+      +to-width(420px)
+        font-size 24px
+        line-height 36px
+
+
+    h4
+      color #0a0a0a
+      font-size 28px
+      font-weight 600
+      line-height 40px
+      // font-family 'Playfair Display'
+      padding-bottom 30px
+      +to-width(1100px)
+        font-size 26px
+      +to-width(640px)
+        font-size 22px
+        line-height 36px
+        padding-bottom 20px
+      +to-width(420px)
+        font-size 20px
+        line-height 34px
+
+    ul, ol
+      padding-bottom 30px
+      padding-left 35px
+      +to-width(640px)
+        padding-bottom 20px
+      +to-width(560px)
+        padding-left 0
+      li
+        color #000
+        font-family Montserrat
+        font-size 16px
+        font-weight 500
+        line-height 30px
+        padding-bottom 20px
+        +to-width(1200px)
+          padding-left 50px
+          &:after
+            left 0!important
+        +to-width(640px)
+          font-size 14px
+
+    ul
+      li
+        position relative
+        &:after
+          content ''
+          position absolute
+          height 2px
+          width 30px
+          background-color #fbcfac
+          left -45px
+          top 12px
+
+    ol
+      li
+        position relative
+        &:after
+          content ''
+          position absolute
+          color #f5bb8e
+          font-size 28px
+          left -35px
+          top -5px
+
+      li
+        &:first-child
+          &:after
+            content '1.'
+        &:nth-child(2)
+          &:after
+            content '2.'
+        &:nth-child(3)
+          &:after
+            content '3.'
+        &:nth-child(4)
+          &:after
+            content '4.'
+        &:nth-child(5)
+          &:after
+            content '5.'
+        &:nth-child(6)
+          &:after
+            content '6.'
+        &:nth-child(7)
+          &:after
+            content '7.'
+        &:nth-child(8)
+          &:after
+            content '8.'
+        &:nth-child(9)
+          &:after
+            content '10.'
+        &:nth-child(12)
+          &:after
+            content '11.'
+
+    p
+      color #000
+      font-family Montserrat
+      font-size 16px
+      font-weight 500
+      line-height 36px
+      padding-bottom 30px
+      +to-width(767px)
+        padding-bottom 20px
+      +to-width(640px)
+        font-size 14px
+      +to-width(420px)
+        line-height 32px
+      span
+        background-color #efdfc4
+        padding 5px 0
+
+      strong
+        font-weight 700
+
+    a
+      color #0089cc
+      position relative
+      t()
+      &:after
+        content ''
+        position absolute
+        left 0
+        right 0
+        bottom -5px
+        height 2px
+        background #289AD1
+        opacity 1
+        t()
+
+      &:hover
+        &:after
+          opacity 0
+
+
+    blockquote
+      // margin-left -70px
+      // margin-right -70px
+      width 100%
+      margin-bottom 70px
+      border none
+      border-left 10px solid #fbcfac
+      padding 10px 40px
+      padding-left 40px
+      padding-right 0px
+      position relative
+      display block
+
+      cite
+        margin-bottom 0
+
+      p
+        font-size 18px
+        font-weight 600
+        line-height 34px
+        color #141414
+        padding-bottom 0
+        +to-width(520px)
+          font-size 16px
+          line-height 32px
+      +to-width(1200px)
+        margin-left 0
+        margin-right 0
+      +to-width(820px)
+        padding-left 110px
+        &:after
+          left 30px
+      +to-width(640px)
+        padding 35px
+        font-size 16px
+        &:after
+          display none
+      +to-width(400px)
+        padding 25px
+        font-size 16px
+
+      &.wp-block-quote
+        cite
+          width 100%
+          display block
+          text-align right
+          margin-bottom -20px
+          margin-top 20px
+          font-size 14px
+          letter-spacing 0.5px
+          color #666
+          font-family "Playfair Display"
+          font-style italic
+
+  figure
+    margin-bottom 0
+    blockquote
+      // margin-left -70px
+      // margin-right -70px
+      width 100%
+      margin-bottom 70px
+      border 10px solid #fbcfac
+      padding 50px 40px
+      padding-left 152px
+      position relative
+      display block
+      p
+        font-size 20px
+        font-weight 600
+        line-height 36px
+        color #141414
+        padding-bottom 0
+        text-align left
+        +to-width(520px)
+          font-size 16px
+          line-height 32px
+
+      cite
+        width 100%
+        display block
+        text-align right
+        margin-bottom -20px
+        margin-top 20px
+        font-size 14px
+        letter-spacing 0.5px
+        color #666
+        font-family "Playfair Display"
+        font-style italic
+        +to-width(520px)
+          padding-bottom 10px
+
+      &:after
+        content ''
+        position absolute
+        top 60px
+        left 55px
+        width 50px
+        height 50px
+        background-size contain
+        background-repeat no-repeat
+        background-image url('../images/bloquote.svg')
+      +to-width(1200px)
+        margin-left 0
+        margin-right 0
+      +to-width(820px)
+        padding-left 110px
+        &:after
+          left 30px
+      +to-width(640px)
+        padding 35px
+        font-size 16px
+        &:after
+          display none
+      +to-width(400px)
+        padding 25px
+        font-size 16px
