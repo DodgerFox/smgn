@@ -72,7 +72,7 @@
     "js-datepicker": "^3.3.7",
     "natives": "^1.1.6",
     "npm-check-updates": "^2.15.0",
-    "pug": "^2.0.3"
+    "pug": "^3.0.1"
   },
   "description": "* Установите `gulp` и `bower` глобально:",
   "main": "gulpfile.js",
